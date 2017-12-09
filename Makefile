@@ -1,2 +1,5 @@
+CC=gcc
+CFLAGS=-I.
+
 kilo: kilo.c
-	$(CC) kilo.c -o -WALL -Wextra -pedantic -std=C99
+	$(CC) -o kilo kilo.o -I
