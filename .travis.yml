@@ -1,18 +1,6 @@
-deploy:
-    provider: pages
-    skip_cleanup: true
-    github_token: PRqC7HRZj7Fjv6q9HEV1
-    on:
-      branch: master
-
-
-
 language: c
-compiler: 
-  - gcc
+os: osx
+compiler: gcc
 
 
 script: make
-
-before_install:
-- test -n $CC && unset CC
