@@ -5,10 +5,8 @@ compiler:
 
 os: osx
 
-
 before_install:
   - test -n $CC && unset CC
-
 
 script: make
 

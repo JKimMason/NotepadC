@@ -1,2 +1,2 @@
 kilo: kilo.c
-	gcc -o kilo kilo.c -I
+	$(CC) kilo.c -o kilo -Wall -Wextra -pedantic -std=c99
