@@ -2,7 +2,7 @@
   #  -g    adds debugging information to the executable file
   #  -Wall turns on most, but not all, compiler warnings
   CFLAGS  = -g -Wall
-
+  CC = gcc
   # the build target executable:
   TARGET = kilo
 
