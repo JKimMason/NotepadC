@@ -2,20 +2,14 @@
 # Makefile NotepadInC
 # ------------------------------------
 
-
 # ------------------
 # Compiler
 # ------------------
 CC       = gcc
-# compiling flags here
-CFLAGS   = -std=c99 -Wall -I.
-
-# ------------------
-# Linker
-# ------------------
-LINKER   = gcc
-# linking flags here
-LFLAGS   = -Wall -I. -lm
+OPTS 	 = -g -O0
+DEBUG	 = -Wall -Wextra -pedantic
+YRS		 = -std=c99
+CFLAGS   = $(OPTS) $(INCLUDE) $(DEBUG) $(YRS)
 
 # -------------------
 # Name of Directories
@@ -28,17 +22,16 @@ BINDIR   = bin
 # -------------------
 # Source Directory: Name each files
 # -------------------
-SRCS=$(SRCDIR)/kilo.c
-
+#SRCS=$(SRCDIR)/kilo.c
 
 
 # -------------------
 # Define flags
 # -------------------
-SOURCES  := $(wildcard $(SRCDIR)/*.c)
-INCLUDES := $(addprefix -I, $(INCDIR)/*.h)
-OBJS  := $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
-rm       = rm -f
+SRCS 	 := $(wildcard $(SRCDIR)/*.c)
+INCLUDE := $(addprefix -I, $(INCDIR)/*.h)
+OBJS  	 := $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
+rm       := rm -f
 
 # -------------------
 # Name of executable
@@ -55,26 +48,25 @@ $(OBJS): $(OBJDIR)/%.o : $(SRCDIR)/%.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 	@echo "Compiled "$<" successfully!"
 
-
 # -------------------
 # Clean: remove all obj file
 # -------------------
 .PHONY: remove
 clean:
 	@$(rm) $(OBJS)
-	@echo "Obj removed!"
+	@echo "Obj files removed!"
 
 # -------------------
 # Clean: remove exe
 # -------------------
 remove: clean
 	@$(rm) $(BINDIR)/$(TARGET)
-	@echo "Executable removed!".PHONY: remove
+	@echo "Exe files removed!".PHONY: remove
 
 # -------------------
 # Cleanall: Remove obj and exe
 cleanall:
 	@$(rm) $(OBJS)
 	@$(rm) $(BINDIR)/$(TARGET) 
-	@echo "Obj and Executable removed!".PHONY: remove
+	@echo "Obj and Exe files removed!".PHONY: remove
 # -------------------------------------------
