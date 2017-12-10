@@ -14,7 +14,7 @@ CFLAGS   = $(OPTS) $(INCLUDE) $(YRS) $(DEBUG)
 # -------------------
 # Name of Directories
 # -------------------
-SRCDIR   = src
+SRCDIR   = src/main/c
 OBJDIR   = obj
 INCDIR   = inc
 BINDIR   = bin
@@ -33,7 +33,6 @@ rm       := rm -f
 TARGET = $(BINDIR)/test
 
 all: $(TARGET)
-run: ./bin/test
 
 $(TARGET): $(OBJS) 
 	${CC} ${CFLAGS} -o $@ $(OBJS)
