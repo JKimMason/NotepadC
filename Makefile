@@ -9,7 +9,7 @@ CC       = gcc
 OPTS 	 = -g -O0
 DEBUG	 = -Wall -Wextra -pedantic
 YRS		 = -std=c99
-CFLAGS   = $(OPTS) $(INCLUDE) $(DEBUG) $(YRS)
+CFLAGS   = $(OPTS) $(INCLUDE) $(YRS) $(DEBUG)
 
 # -------------------
 # Name of Directories
