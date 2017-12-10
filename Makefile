@@ -20,12 +20,6 @@ INCDIR   = inc
 BINDIR   = bin
 
 # -------------------
-# Source Directory: Name each files
-# -------------------
-#SRCS=$(SRCDIR)/kilo.c
-
-
-# -------------------
 # Define flags
 # -------------------
 SRCS 	 := $(wildcard $(SRCDIR)/*.c)
