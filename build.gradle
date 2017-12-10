@@ -1,0 +1,17 @@
+apply plugin : 'c'
+
+model {
+	components {
+		main(NativeExecutableSpec){
+			sources {
+				c(CSourceSet) {
+					source {
+						srcDir "src/*.c"
+						include "inc/*.h"
+					}
+				}
+			}
+		}
+	}
+}
+

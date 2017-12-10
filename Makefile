@@ -33,6 +33,7 @@ rm       := rm -f
 TARGET = $(BINDIR)/test
 
 all: $(TARGET)
+run: ./bin/test
 
 $(TARGET): $(OBJS) 
 	${CC} ${CFLAGS} -o $@ $(OBJS)
