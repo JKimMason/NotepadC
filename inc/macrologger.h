@@ -1,4 +1,3 @@
-#ifndef __MACROLOGGER_H__
 #define __MACROLOGGER_H__
 
 #include <time.h>

@@ -29,20 +29,19 @@ BINDIR   = bin
 # Define flags
 # -------------------
 SRCS 	 := $(wildcard $(SRCDIR)/*.c)
-INCLUDE := $(addprefix -I, $(INCDIR)/*.h)
+INCLUDE := $(addprefix -I, $(INCDIR))
 OBJS  	 := $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 rm       := rm -f
 
 # -------------------
 # Name of executable
 # -------------------
-TARGET = $(BINDIR)/kilo
+TARGET = $(BINDIR)/test
 
 all: $(TARGET)
 
 $(TARGET): $(OBJS) 
 	${CC} ${CFLAGS} -o $@ $(OBJS)
-	@echo "Linking complete!"
 
 $(OBJS): $(OBJDIR)/%.o : $(SRCDIR)/%.c
 	@$(CC) $(CFLAGS) -c $< -o $@
