@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <termios.h>
 #include "macrologger.h"
 
@@ -20,7 +21,7 @@ int main() {
 void enableRawMode(){
 	tcgetattr(STDIN_FILENO, &orig_termios);
 	atexit(disableRawMode);
-	
+
 	struct termios raw = orig_termios;
 	raw.c_lflag &= ~(ECHO);
 
