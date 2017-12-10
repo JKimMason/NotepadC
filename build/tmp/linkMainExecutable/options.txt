@@ -1,4 +1,0 @@
--o
-/Users/home/Developer/NotepadInC/build/exe/main/main
-/Users/home/Developer/NotepadInC/build/objs/main/mainC/3baxrnbpspy11za9bg7tvtiu8/kilo.o
--m64

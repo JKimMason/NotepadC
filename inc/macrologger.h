@@ -1,13 +1,8 @@
-
 #ifndef __MACROLOGGER_H__
 #define __MACROLOGGER_H__
 
-#ifdef __OBJC__
-#import <Foundation/Foundation.h>
-#else
 #include <time.h>
 #include <string.h>
-#endif
 
 // === auxiliar functions
 static inline char *timenow();
