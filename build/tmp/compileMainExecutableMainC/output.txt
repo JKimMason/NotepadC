@@ -1,0 +1,4 @@
+See file:///Users/home/Developer/NotepadInC/build/tmp/compileMainExecutableMainC/output.txt for all output for compileMainExecutableMainC.
+compiling kilo.c successful.
+
+Finished compileMainExecutableMainC, see full log file:///Users/home/Developer/NotepadInC/build/tmp/compileMainExecutableMainC/output.txt.
