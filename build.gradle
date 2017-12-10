@@ -1,5 +1,20 @@
 apply plugin: "c"
 
+
+
+
+//sourceSets {
+//	main{
+//		c {
+//			srcDir 'src/main/c'
+//		}
+//		resources
+//	}
+//}
+
+
+
+
 model {
     components {
     	main(NativeExecutableSpec)
