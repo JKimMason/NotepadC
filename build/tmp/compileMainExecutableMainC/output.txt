@@ -1,4 +1,8 @@
 See file:///Users/home/Developer/NotepadInC/build/tmp/compileMainExecutableMainC/output.txt for all output for compileMainExecutableMainC.
-compiling kilo.c successful.
+compiling kilo.c failed.
+/Users/home/Developer/NotepadInC/src/main/c/kilo.c:4:10: fatal error: 'macrologger.h' file not found
+#include "macrologger.h"
+         ^~~~~~~~~~~~~~~
+1 error generated.
 
 Finished compileMainExecutableMainC, see full log file:///Users/home/Developer/NotepadInC/build/tmp/compileMainExecutableMainC/output.txt.

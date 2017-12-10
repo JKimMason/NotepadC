@@ -99,7 +99,4 @@ static inline void objc_print(NSString *format, ...) {
     va_end(args);
     AUTORELEASEPOOL_END
 }
-
-#endif
-
 #endif
