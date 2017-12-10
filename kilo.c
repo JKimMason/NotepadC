@@ -12,7 +12,7 @@ int main() {
 }
 
 void enableRawMode(){
-	struct terminos raw;
+	struct termios raw;
 	tcgetattr(STDIN_FILENO, &raw);
 
 	raw.c_lflag &= ~(ECHO);
