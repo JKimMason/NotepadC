@@ -1,0 +1,148 @@
+kilo.c:3:10: fatal error: 'macrologger.h' file not found
+#include "macrologger.h"
+         ^~~~~~~~~~~~~~~
+1 error generated.
+make: *** [kilo] Error 1
+kilo.c:3:10: fatal error: 'macrologger.h' file not found
+#include "macrologger.h"
+         ^~~~~~~~~~~~~~~
+1 error generated.
+make: *** [kilo] Error 1
+In file included from kilo.c:3:
+./macrologger.h:54:32: warning: named variadic macros are a GNU extension [-Wvariadic-macros]
+#define LOG_DEBUG(message, args...)     PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(DEBUG_TAG), ## args)
+                               ^
+./macrologger.h:60:31: warning: named variadic macros are a GNU extension [-Wvariadic-macros]
+#define LOG_INFO(message, args...)      PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(INFO_TAG), ## args)
+                              ^
+./macrologger.h:66:32: warning: named variadic macros are a GNU extension [-Wvariadic-macros]
+#define LOG_ERROR(message, args...)     PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(ERROR_TAG), ## args)
+                               ^
+./macrologger.h:72:46: warning: named variadic macros are a GNU extension [-Wvariadic-macros]
+#define LOG_IF_ERROR(condition, message, args...) if (condition) PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(ERROR_TAG), ## args)
+                                             ^
+./macrologger.h:105:7: warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+kilo.c:8:27: warning: must specify at least one argument for '...' parameter of variadic macro [-Wgnu-zero-variadic-macro-arguments]
+        LOG_INFO("Main: no error");
+                                 ^
+./macrologger.h:60:9: note: macro 'LOG_INFO' defined here
+#define LOG_INFO(message, args...)      PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(INFO_TAG), ## args)
+        ^
+./macrologger.h:60:98: warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define LOG_INFO(message, args...)      PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(INFO_TAG), ## args)
+                                                                                                 ^
+kilo.c:8:2: warning: implicit declaration of function 'fprintf' is invalid in C99 [-Wimplicit-function-declaration]
+        LOG_INFO("Main: no error");
+        ^
+./macrologger.h:60:41: note: expanded from macro 'LOG_INFO'
+#define LOG_INFO(message, args...)      PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(INFO_TAG), ## args)
+                                        ^
+./macrologger.h:40:41: note: expanded from macro 'PRINTFUNCTION'
+#define PRINTFUNCTION(format, ...)      fprintf(stderr, format, __VA_ARGS__)
+                                        ^
+kilo.c:8:2: warning: declaration of built-in function 'fprintf' requires inclusion of the header <stdio.h> [-Wbuiltin-requires-header]
+./macrologger.h:60:41: note: expanded from macro 'LOG_INFO'
+#define LOG_INFO(message, args...)      PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(INFO_TAG), ## args)
+                                        ^
+./macrologger.h:40:41: note: expanded from macro 'PRINTFUNCTION'
+#define PRINTFUNCTION(format, ...)      fprintf(stderr, format, __VA_ARGS__)
+                                        ^
+kilo.c:8:2: error: use of undeclared identifier 'stderr'
+./macrologger.h:60:41: note: expanded from macro 'LOG_INFO'
+#define LOG_INFO(message, args...)      PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(INFO_TAG), ## args)
+                                        ^
+./macrologger.h:40:49: note: expanded from macro 'PRINTFUNCTION'
+#define PRINTFUNCTION(format, ...)      fprintf(stderr, format, __VA_ARGS__)
+                                                ^
+kilo.c:17:18: warning: must specify at least one argument for '...' parameter of variadic macro [-Wgnu-zero-variadic-macro-arguments]
+        LOG_DEBUG("Test");
+                        ^
+./macrologger.h:54:9: note: macro 'LOG_DEBUG' defined here
+#define LOG_DEBUG(message, args...)     PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(DEBUG_TAG), ## args)
+        ^
+./macrologger.h:54:99: warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define LOG_DEBUG(message, args...)     PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(DEBUG_TAG), ## args)
+                                                                                                  ^
+kilo.c:17:2: error: use of undeclared identifier 'stderr'
+        LOG_DEBUG("Test");
+        ^
+./macrologger.h:54:41: note: expanded from macro 'LOG_DEBUG'
+#define LOG_DEBUG(message, args...)     PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(DEBUG_TAG), ## args)
+                                        ^
+./macrologger.h:40:49: note: expanded from macro 'PRINTFUNCTION'
+#define PRINTFUNCTION(format, ...)      fprintf(stderr, format, __VA_ARGS__)
+                                                ^
+11 warnings and 2 errors generated.
+make: *** [kilo] Error 1
+In file included from kilo.c:4:
+./macrologger.h:54:32: warning: named variadic macros are a GNU extension [-Wvariadic-macros]
+#define LOG_DEBUG(message, args...)     PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(DEBUG_TAG), ## args)
+                               ^
+./macrologger.h:60:31: warning: named variadic macros are a GNU extension [-Wvariadic-macros]
+#define LOG_INFO(message, args...)      PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(INFO_TAG), ## args)
+                              ^
+./macrologger.h:66:32: warning: named variadic macros are a GNU extension [-Wvariadic-macros]
+#define LOG_ERROR(message, args...)     PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(ERROR_TAG), ## args)
+                               ^
+./macrologger.h:72:46: warning: named variadic macros are a GNU extension [-Wvariadic-macros]
+#define LOG_IF_ERROR(condition, message, args...) if (condition) PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(ERROR_TAG), ## args)
+                                             ^
+./macrologger.h:105:7: warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+kilo.c:9:27: warning: must specify at least one argument for '...' parameter of variadic macro [-Wgnu-zero-variadic-macro-arguments]
+        LOG_INFO("Main: no error");
+                                 ^
+./macrologger.h:60:9: note: macro 'LOG_INFO' defined here
+#define LOG_INFO(message, args...)      PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(INFO_TAG), ## args)
+        ^
+./macrologger.h:60:98: warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define LOG_INFO(message, args...)      PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(INFO_TAG), ## args)
+                                                                                                 ^
+kilo.c:18:18: warning: must specify at least one argument for '...' parameter of variadic macro [-Wgnu-zero-variadic-macro-arguments]
+        LOG_DEBUG("Test");
+                        ^
+./macrologger.h:54:9: note: macro 'LOG_DEBUG' defined here
+#define LOG_DEBUG(message, args...)     PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(DEBUG_TAG), ## args)
+        ^
+./macrologger.h:54:99: warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define LOG_DEBUG(message, args...)     PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(DEBUG_TAG), ## args)
+                                                                                                  ^
+9 warnings generated.
+In file included from kilo.c:4:
+./macrologger.h:54:32: warning: named variadic macros are a GNU extension [-Wvariadic-macros]
+#define LOG_DEBUG(message, args...)     PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(DEBUG_TAG), ## args)
+                               ^
+./macrologger.h:60:31: warning: named variadic macros are a GNU extension [-Wvariadic-macros]
+#define LOG_INFO(message, args...)      PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(INFO_TAG), ## args)
+                              ^
+./macrologger.h:66:32: warning: named variadic macros are a GNU extension [-Wvariadic-macros]
+#define LOG_ERROR(message, args...)     PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(ERROR_TAG), ## args)
+                               ^
+./macrologger.h:72:46: warning: named variadic macros are a GNU extension [-Wvariadic-macros]
+#define LOG_IF_ERROR(condition, message, args...) if (condition) PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(ERROR_TAG), ## args)
+                                             ^
+./macrologger.h:105:7: warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+kilo.c:9:27: warning: must specify at least one argument for '...' parameter of variadic macro [-Wgnu-zero-variadic-macro-arguments]
+        LOG_INFO("Main: no error");
+                                 ^
+./macrologger.h:60:9: note: macro 'LOG_INFO' defined here
+#define LOG_INFO(message, args...)      PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(INFO_TAG), ## args)
+        ^
+./macrologger.h:60:98: warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define LOG_INFO(message, args...)      PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(INFO_TAG), ## args)
+                                                                                                 ^
+kilo.c:18:18: warning: must specify at least one argument for '...' parameter of variadic macro [-Wgnu-zero-variadic-macro-arguments]
+        LOG_DEBUG("Test");
+                        ^
+./macrologger.h:54:9: note: macro 'LOG_DEBUG' defined here
+#define LOG_DEBUG(message, args...)     PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(DEBUG_TAG), ## args)
+        ^
+./macrologger.h:54:99: warning: token pasting of ',' and __VA_ARGS__ is a GNU extension [-Wgnu-zero-variadic-macro-arguments]
+#define LOG_DEBUG(message, args...)     PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(DEBUG_TAG), ## args)
+                                                                                                  ^
+9 warnings generated.

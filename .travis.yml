@@ -8,7 +8,7 @@ os: osx
 before_install:
   - test -n $CC && unset CC
 
-script: make
+script: make 2>> build.log
 
 notifications:
   email:

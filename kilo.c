@@ -1,9 +1,12 @@
 #include <unistd.h>
+#include <stdio.h>
 #include <termios.h>
+#include "macrologger.h"
 
 void enableRawMode();
 
 int main() {
+	LOG_INFO("Main: no error");
 	enableRawMode();
 
 	char c;
@@ -12,6 +15,7 @@ int main() {
 }
 
 void enableRawMode(){
+	LOG_DEBUG("Test");
 	struct termios raw;
 	tcgetattr(STDIN_FILENO, &raw);
 
