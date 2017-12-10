@@ -30,7 +30,7 @@ rm       := rm -f
 # -------------------
 # Name of executable
 # -------------------
-TARGET = $(BINDIR)/test
+TARGET = $(BINDIR)/kilo
 
 all: $(TARGET)
 
